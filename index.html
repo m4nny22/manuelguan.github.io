@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel Guan - CV</title>
+    <title>Manuel Guan - CV / Resume</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
-            background-color: #525659;
+            background-color: #525659;  /* 你的深灰背景，很好 */
         }
         iframe {
             width: 100%;
@@ -18,11 +18,36 @@
             border: none;
             display: block;
         }
+        .fallback {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
     </style>
 </head>
 <body>
-    <iframe src="Manuel_Guan.pdf" type="application/pdf">
-        <p>Preview not available. <a href="Manuel_Guan.pdf">Click here to download Manuel Guan's CV</a>.</p>
+    <iframe 
+        src="Manuel_Guan.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" 
+        title="Manuel Guan - CV / Resume">
     </iframe>
+
+    <!-- Fallback link (显示在 iframe 加载失败或不支持时) -->
+    <div class="fallback" style="display: none;">
+        <p>PDF preview not supported in your browser.</p>
+        <a href="Manuel_Guan.pdf" style="color: #3498db; font-size: 1.2rem; text-decoration: underline;">
+            Download Manuel Guan's CV (PDF)
+        </a>
+    </div>
+
+    <noscript>
+        <div class="fallback" style="display: block;">
+            <p>JavaScript is disabled.</p>
+            <a href="Manuel_Guan.pdf">Open / Download CV PDF</a>
+        </div>
+    </noscript>
 </body>
 </html>
