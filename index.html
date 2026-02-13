@@ -1,16 +1,17 @@
+cat <<EOF > ~/Desktop/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manuel Guan - CV / Resume</title>
+    <title>Manuel Guan - CV</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
-            background-color: #525659;  /* 你的深灰背景，很好 */
+            background-color: #525659;
         }
         iframe {
             width: 100%;
@@ -18,36 +19,31 @@
             border: none;
             display: block;
         }
-        .fallback {
+        /* 这是一个浮动的下载按钮，确保手机端也能下载 */
+        .download-btn {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
             color: white;
-            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
             font-family: Arial, sans-serif;
+            font-size: 14px;
+            z-index: 100;
+        }
+        .download-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
 <body>
-    <iframe 
-        src="Manuel_Guan.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" 
-        title="Manuel Guan - CV / Resume">
+    <iframe src="Manuel_Guan.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Manuel Guan CV">
+        <p>Your browser does not support PDF preview. <a href="Manuel_Guan.pdf">Download the PDF</a>.</p>
     </iframe>
 
-    <!-- Fallback link (显示在 iframe 加载失败或不支持时) -->
-    <div class="fallback" style="display: none;">
-        <p>PDF preview not supported in your browser.</p>
-        <a href="Manuel_Guan.pdf" style="color: #3498db; font-size: 1.2rem; text-decoration: underline;">
-            Download Manuel Guan's CV (PDF)
-        </a>
-    </div>
-
-    <noscript>
-        <div class="fallback" style="display: block;">
-            <p>JavaScript is disabled.</p>
-            <a href="Manuel_Guan.pdf">Open / Download CV PDF</a>
-        </div>
-    </noscript>
+    <a href="Manuel_Guan.pdf" class="download-btn" download>Download PDF</a>
 </body>
 </html>
+EOF
