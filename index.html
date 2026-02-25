@@ -19,7 +19,6 @@ cat <<EOF > ~/Desktop/index.html
             border: none;
             display: block;
         }
-        /* 这是一个浮动的下载按钮，确保手机端也能下载 */
         .download-btn {
             position: absolute;
             bottom: 20px;
@@ -39,11 +38,13 @@ cat <<EOF > ~/Desktop/index.html
     </style>
 </head>
 <body>
-    <iframe src="Manuel GUAN CV.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Manuel Guan CV">
-        <p>Your browser does not support PDF preview. <a href="Manuel GUAN CV.pdf">Download the PDF</a>.</p>
+    <iframe src="Manuel%20GUAN%20CV.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="Manuel Guan CV">
+        
+        <p>Your browser does not support PDF preview. <a href="Manuel%20GUAN%20CV.pdf">Download the PDF</a>.</p>
     </iframe>
 
-    <a href="Manuel GUAN CV.pdf" class="download-btn" download>Download PDF</a>
+    <a href="Manuel%20GUAN%20CV.pdf" class="download-btn" download>Download PDF</a>
+    
 </body>
 </html>
 EOF
